@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Patel</title>
+<style>
+  :root {
+  --bg: #f0f0f0;
+  --text: #333;
+  --card: #ffffff;
+  --border: #ddd;
+  --nav-bg: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.95),
+    rgba(220,220,220,0.85)
+  );
+
+  --nav-border: rgba(0,0,0,0.12);
+  }
+
+  html[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --text: #eaeaea;
+  --card: #1a1a1a;
+  --border: #333;
+  --nav-bg: linear-gradient(
+    to bottom,
+    #2f2f2f 0%,
+    #141414 45%,
+    #070707 100%
+  );
+
+  --nav-border: rgba(255,255,255,0.18);
+  }
+  
+   body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+    background-color: var(--bg);
+    color: var(--text);
+   }
+   .hero {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+
+    max-width: 900px;
+    margin: 80px auto;
+
+    gap: 3rem;
+  }
+
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 0 1.5rem;
+    font-family: var(--mono); font-size: 0.78rem;
+    color: var(--text3); margin-bottom: 1.5rem;
+  }
+
+  .hero-meta span strong { color: var(--text); font-weight: 500; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .accent {
+    color: #51bc45;
+
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .hero-links a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 0.7rem;
+
+      padding: 10px 18px;
+
+      border: 1px solid #333;
+      border-radius: 8px;
+
+      background-color: #333;
+
+      transition: all 0.2s ease;
+  }
+
+  .hero-links a:hover {
+      background-color: #333;
+      transform: translateY(-2px);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: copperplate, 'fantasy';
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+
+    font-size: 0.9rem;
+    padding: 8px 12px;
+
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+ .theme-toggle {
+    background: none;
+    border: 1px solid var(--border2);
+    color: var(--text3);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    letter-spacing: 0.03em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+  }
+  
+</style>
+</head>
+<body>
+  <!--Navigation bar creation-->
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+       
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <span id="theme-icon">☼</span>
+    </button>
+    </nav>
+
+  <div class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Building systems that <em><span class="accent">uncover</span></em> the patterns hidden within disease.</h1>
+      <p class="hero-sub">Hi, I'm Raj! I'm an incoming first-year student at University of Wisconsin–Madison studying Molecular and Cellular Biology.
+ 
+      I'm interested in learning about research, computational biology, and science communication—and how these fields can intersect to advance the human condition.
+ 
+      I'd love to connect. Feel free to reach out at rhpatel6 [at] wisc [dot] edu.
+      </p>
+      <div class="hero-meta">
+        <span><strong>IMSA '26 · UW-Madison Bio '30</strong></span>
+        <span>Aurora, IL</span>
+        <span>Python · ML · Forecasting · Graph Systems</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/rajptl14" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="https://www.linkedin.com/in/raj-patel-115321330" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="mailto:rajptl2026@gmail.com">email</a>
+        <a href="#research">papers</a>
+      </div>
+      <img src="1E14DFCE-D0F1-426E-8BD9-48F86859236F.JPG" alt="Raj Patel" class="hero-photo" onerror="this.outerHTML='&lt;div class=&quot;hero-photo&quot;&gt;photo.jpg&lt;/div&gt;'">
+    </div>
+<script>
+    const toggle = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+    const icon = document.getElementById("theme-icon");
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+
+      if (current === "light") {
+        root.setAttribute("data-theme", "dark");
+        icon.textContent = "☾";
+      } else {
+        root.setAttribute("data-theme", "light");
+        icon.textContent = "☼";
+      }
+    });
+</script>
+</body>
+</html>
