@@ -3,7 +3,7 @@
 <head>
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
@@ -11,31 +11,22 @@
 <title>Raj Patel</title>
 <style>
   :root {
-  --bg: #f0f0f0;
+  --bg: #ffffff;
   --text: #333;
   --card: #ffffff;
   --border: #ddd;
-  --nav-bg: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.95),
-    rgba(220,220,220,0.85)
-  );
+  --nav-bg: #ffffff;
   --dot-color: rgba(0,0,0,0.12);
 
   --nav-border: rgba(0,0,0,0.12);
   }
 
   html[data-theme="dark"] {
-  --bg: #0f0f0f;
+  --bg: #000000;
   --text: #eaeaea;
   --card: #1a1a1a;
   --border: #333;
-  --nav-bg: linear-gradient(
-    to bottom,
-    #2f2f2f 0%,
-    #141414 45%,
-    #070707 100%
-  );
+  --nav-bg: #000000;
   --dot-color: rgba(255,255,255,0.12);
 
   --nav-border: rgba(255,255,255,0.18);
@@ -65,6 +56,7 @@
     display: flex; flex-wrap: wrap; gap: 0 1.5rem;
     font-family: var(--mono); font-size: 0.78rem;
     color: var(--text3); margin-bottom: 1.5rem;
+    font-size: 1.25=rem;
   }
   .hero-photo {
     width: 160px;
@@ -81,7 +73,11 @@
   }
   .hero h1 {
     white-space: normal; 
-    font-family: "Noto Serif", serif;
+    font-family: var(--serif);
+    font-weight:100;
+    line-height: 1.2;
+    spacing: 0em; 
+    margin-bottom: 0.5rem;
   }
   .hero-meta span strong { color: var(--text); font-weight: 500; }
 
@@ -134,8 +130,6 @@
 
     background: var(--nav-bg);
     border-bottom: 1px solid var(--nav-border);
-
-    backdrop-filter: blur(12px);
 
     position: sticky;
     top: 0;
@@ -194,6 +188,7 @@
     }
     p {
       font-size: 1.175rem;
+      margin-top: 0rem;
     }
 
     h1 {
@@ -215,24 +210,21 @@
     <span id="theme-icon">☼</span>
     </button>
     </nav>
-
+  <!--Hero section creation (cover page)-->
   <div class="hero" id="hero">
     <div class="hero-text">
       <h1><span id="typed"></span></h1>
       <div id="typed-strings">
-        <p>Building Systems that <span class="accent"><em>UNCOVER</em></span> the Patterns Hidden Within Disease.</p>
+        <p>Building Systems that <span class="accent"><em>UNCOVER</em></span> Patterns</p>
       </div>
-      <p class="hero-sub">Hi, I'm Raj! I'm an incoming first-year student at University of Wisconsin–Madison studying Molecular and Cellular Biology.
- 
-      I'm interested in learning about research, computational biology, and science communication—and how these fields can intersect to advance the human condition.
- 
-      I'd love to connect. Feel free to reach out at rhpatel6 [at] wisc [dot] edu.
+      <p class="hero-sub">Hi, I'm Raj! I'm an incoming first-year student at University of Wisconsin–Madison studying Molecular and Cellular Biology. I'm interested in learning about research, computational biology, and science communication—and how these fields can intersect to advance the human condition. I'd love to connect. Feel free to reach out at rhpatel6 [at] wisc [dot] edu
       </p>
       <div class="hero-meta">
         <span><strong>IMSA '26 · UW-Madison Bio '30</strong></span>
         <span>Caledonia, IL</span>
         <span>Python · Wet Lab Research · Web Development · Data Analysis</span>
       </div>
+      <!--Button links-->
       <div class="hero-links">
         <a href="https://github.com/rajptl14" target="_blank" rel="noopener noreferrer">github</a>
         <a href="https://www.linkedin.com/in/raj-patel-115321330" target="_blank" rel="noopener noreferrer">linkedin</a>
@@ -240,6 +232,7 @@
         <a href="#research">papers</a>
       </div>
   </div>
+<!--My pfp-->
 <img src="1E14DFCE-D0F1-426E-8BD9-48F86859236F.JPG"
      alt="Raj Patel"
      class="hero-photo">
@@ -271,8 +264,5 @@
     showCursor: false
   });
 </script>
-
-
 </body>
 </html>
-
