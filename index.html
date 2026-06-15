@@ -43,20 +43,24 @@
     radial-gradient(circle, var(--dot-color) 1.5px, transparent 1.5px);
 
     background-size: 24px 24px;
+    line-height: 1.6;
   }
    .hero {
     display: grid;
     grid-template-columns: 1fr 160px;
     max-width: 900px;
-    min-height: 100vh;
     margin: 80px auto;
     gap: 3rem;
+    align-items: start;
   }
   .hero-meta {
     display: flex; flex-wrap: wrap; gap: 0 1.5rem;
     font-family: var(--mono); font-size: 0.78rem;
     color: var(--text3); margin-bottom: 1.5rem;
     font-size: 1.25=rem;
+  }
+  .hero-sub {
+    margin-right: 100px;
   }
   .hero-photo {
     width: 160px;
@@ -65,7 +69,6 @@
     border-radius: 50%;
     object-fit: cover;
 
-    justify-self: end;
     display: block;
     align-self: end;
   }
@@ -74,8 +77,9 @@
   }
   .hero h1 {
     white-space: normal; 
-    font-family: var(--serif);
+    font-family: 'Instrument Serif', Georgia, serif;
     font-weight:100;
+    font-size: 2.5rem;
     line-height: 1.2;
     spacing: 0em; 
     margin-bottom: 0.5rem;
@@ -188,13 +192,27 @@
       background-size: 16px 16px;
     }
     p {
-      font-size: 1.175rem;
+      font-size: 1rem;
       margin-top: 0rem;
+      margin-right: 100px;
     }
 
     h1 {
       font-size: 3rem;
     }
+
+    section {
+      width: 100%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #about {
+      margin-top: 300px;
+    }
+
+    
 </style>
 </head>
 <body>
@@ -241,6 +259,14 @@
 <img src="1E14DFCE-D0F1-426E-8BD9-48F86859236F.JPG"
      alt="Raj Patel"
      class="hero-photo">
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m an incoming freshman at the University of Wisconsin–Madison. Prior to university, I attended the Illinois Mathematics and Science Academy, where I focused on rigorous coursework alongside research in computational biology and medicine.
+
+  Over the past few years, I’ve conducted research with Northwestern University’s Klein Lab and the University of Illinois Chicago’s Minshall Lab, worked on independent research projects with peers, and taken on IMSA’s challenging STEM curriculum. Outside of research, I co-founded AURA, a fundraiser dedicated to supporting early breast cancer detection and awareness.
+
+  I’m especially interested in early disease detection, biological pattern discovery, and building computational systems that reveal structure in complex medical and scientific data. Outside of research and coding, I enjoy science communication and thinking about how technical ideas can be made more understandable and impactful.</p>
+</section>
 <script>
     const toggle = document.getElementById("theme-toggle");
     const root = document.documentElement;
