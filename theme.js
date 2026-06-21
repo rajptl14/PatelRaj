@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         typeSpeed: 70,
         backSpeed: 0,
         loop: false,
-        showCursor: false
+        showCursor: true
     });
 
     const toggle = document.getElementById("theme-toggle");
